@@ -1,0 +1,20 @@
+body {
+  background: #555;
+  text-align: center;
+  
+}
+
+
+#dynamic-placeholder {
+  v-align: center;
+  height: 50px;
+  width: 50%;
+  font-size: 30px;
+  background: #000;
+  border-radius: 5px;
+  border: none; 
+  margin: 50px auto;
+  padding: 10px;
+  color: #fff;
+  outline: none !important;
+}
