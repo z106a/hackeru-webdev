@@ -15,13 +15,23 @@ class App extends Component {
       this.setState({counter: this.state.counter + 1}) :
       this.setState({counter: this.state.counter - 1});
   }
+  
+  clickH = (sign) => {
+    sign === '+' ? 
+      this.setState({counter: this.state.counter + 1}) :
+      this.setState({counter: this.state.counter - 1});
+  }
 
   render() {
     return (
       <div className="App">
         <div>{this.state.counter}</div>
-        <Button sign="+" buttonHandler={this.clickHandler}/>
-        <Button sign="-" buttonHandler={this.clickHandler}/>
+        <div className="btn-group">
+          <Button sign="+" buttonHandler={this.clickH}/>
+          <Button sign="-" buttonHandler={this.clickHandler}/>
+          <Button buttonHandler={this.clickHandler}>+</Button>
+        </div>
+        
       </div>
     );
   }
@@ -29,10 +39,11 @@ class App extends Component {
 export default App;
 
 const Button = (props) => {
+  const sign = props.sign ? props.sign : props.children;
   return (
     <button 
-      onClick={() => props.buttonHandler(props.sign)}>
-      {props.sign}
+      onClick={() => props.buttonHandler(sign )}>
+      {sign}
     </button>
   )  ;
 }

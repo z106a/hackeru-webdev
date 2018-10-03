@@ -12,3 +12,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.btn-group {
+  margin-top: 50px;
+}
+button {
+  display: inline-block;
+  width: 30%;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: purple;
+  font-size: large;
+  border-style: none;
+  box-shadow: 1px 3px #f9f4f4;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+button:active {
+  transform: translateY(2px);
+}
