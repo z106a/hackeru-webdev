@@ -3,7 +3,7 @@ export default function(state = null, action) {
     case 'SELECT_BOOK':
       console.log(action.payload);
       return action.payload;
-    default:
+      default:
       return state;
   }
   

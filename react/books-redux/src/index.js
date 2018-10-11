@@ -8,7 +8,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(reducers, {books: []});
+const store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>
