@@ -4,6 +4,7 @@ import {Link, Route} from 'react-router-dom';
 import * as actions from './actions';
 import CommentBox from './components/commentbox';
 import CommentList from './components/commentlist';
+import Signin from './components/signin';
 
 class App extends Component { 
   // props.auth - true, false, 
@@ -13,28 +14,29 @@ class App extends Component {
   }
   renderButton() {
     if (this.props.auth) {
-      return <button onClick={this.toggleAuth.bind(this)}>Sign Out</button>
+      return <button onClick={this.toggleAuth.bind(this)} className="btn btn-danger">Sign Out</button>
     }
-    return <button onClick={this.toggleAuth.bind(this)}>Sign In</button>
+    return <Link to="/login" className="btn btn-primary">Sign In</Link>
   }
 
   render() {
    return (
       <div className="container">
-        <div className="row">
-          <ul className='header'>
+        <div className="row header">
+          <ul className='col-md-12'>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/post">Post a comment</Link></li>
             <li>{this.renderButton()}</li>
           </ul>
+        </div>
 
-          <div className="row">
+          <div className="row" style={{"backgroundColor": "aliceblue"}}>
           <div className="col-md-auto">
+            <Route path="/login" component={Signin} />
             <Route path="/post" component={CommentBox} />
             <Route path="/" exact component={CommentList} />
           </div>
           </div>
-        </div>
       </div>
     );
   }
