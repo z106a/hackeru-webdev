@@ -1,19 +1,22 @@
+:root {
+  --darker: #343434;
+}
 .string {
-  width: 50vmin;
+  width: 40vmin;
   height: 8vmin;
   margin: 4vmin;
   transition: 0.3s ease;
-  background: lightgreen;
+  background: #3749a2;
 }
 
 .string.darker {
-  background: #343434;
+  background: var(--darker);
   filter: blur(3vmin);
 }
 
 #btn {
   position: absolute;
-  padding: 5vmin 10vmin;
+  padding: 5vmin 5vmin;
   color: #d6d6d6;
   font-size: 8vmin;
   font-family: 'Roboto', sans-serif;
@@ -21,19 +24,19 @@
   background: #3749a2;
   border-radius: 5%;
   top: 5vmin;
-  left: 80vmin;
+  right: 5vmin;
   transition: 0.3s ease;
   cursor: pointer;
 }
 
 #btn:hover,
 #btn:active {
-  border-radius: 50%;
+  border-radius: 2.5em;
   box-shadow: 1vmin 1vmin 1vmin grey;
 }
 
 #btn.darker {
   border-radius: 0;
-  background: #343434;
+  background: var(--darker);
   filter: blur(3vmin);
 }
