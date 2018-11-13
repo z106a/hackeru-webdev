@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+  <div class="card-container">
+    <img 
+      srcset="assets/1.jpg 600w,
+      assets/1.jpg 900w"
+      sizes="(max-width: 600px) 100vw, 50vw"
+      src="assets/1.jpg" />
+
+    <div class="card-description">
+      test description
+    </div>
+    <div class="card-controls">
+      <div class="circles">
+          <button class='button dot'></button>
+      </div>
+      <div class="actions">
+        <button class='button control moving'><</button>
+        <button class='button control play'></button>
+        <button class='button control moving'>></button>
+      </div>
+    </div>
+  </div>
+  <p>----</p>
+  <img 
+      srcset="assets/1.jpg 600w,
+      assets/1.jpg 900w"
+      sizes="(max-width: 600px) 100vw, 50vw"
+      src="assets/1.jpg" 
+  />
+  <button class='button'></button>
+  <script src="main.js"></script>
+
+</body>
+</html>
