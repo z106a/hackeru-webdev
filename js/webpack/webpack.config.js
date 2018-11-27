@@ -5,12 +5,27 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production'
 console.log(devMode);
 
+const optimization = {
+  splitChunks: {
+    cacheGroups: {
+      node_vendors: {
+        test: /[\\/]node_modules[\\/]/,
+        name: "vendors",
+        chunks: "all",
+        priority: 1,
+      }
+    }
+
+  }
+}
+
 module.exports = {
   entry: { main: './src/index.js'},
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
   },
+  optimization: optimization,
   module: {
     rules: [
       {
