@@ -1,0 +1,91 @@
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+  margin: 20 auto;
+  padding: 0;
+  font-family: $sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #113436;
+}
+* {
+  box-sizing: border-box;
+}
+textarea, select, input, button { outline: none; }
+button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+input, button {
+  @extend button-reset;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  //padding: 10px 15px;
+  font-size: 0.8rem;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+@media(max-width: 600px) {
+  .header {
+    width: 100%;
+  }
+}
+.header {
+  margin: 0 auto;
+  width: 640px;
+  h2 { color: whitesmoke; }
+  // max-width: 640px;
+  &__button {
+    margin-right: .4em;
+    padding: .5em 1em;
+    background-color: lighten($color: #113436, $amount: 10);
+    color: whitesmoke;
+    border-radius: 2px;
+    //border-left: 1px solid black;
+    //border-top: 1px solid black;
+    &:last-of-type {
+      //border-right: 1px solid black;
+    }
+    &--selected {
+      background-color: #55ff28;
+      color: black;
+    }
+
+  }
+ 
+}
+
+.content {
+  display: flex;
+  // flex-wrap: wrap;
+  border: 1px darken($color: #55ff28, $amount: 20)  solid;
+  h3 {color: whitesmoke;}
+  .summary {
+    width: 100%;
+    margin-right: .4em;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+  .info {
+    color: white;
+  }
+
+  &__review {
+    text-align: center;
+    width: 100%;
+  }
+  quote {
+    p {color: whitesmoke;}
+    cite { color: whitesmoke;}
+  }
+}
+
+

@@ -10,6 +10,7 @@ jQuery(document).ready(function() {
 
   // Initially hide the answers for the FAQ section
   jQuery(".answer").hide();
+  jQuery(".faq h4").addClass("faq-question");
 
   // Handling the FAQ question click
   jQuery(".faq h4").click(function() {
@@ -18,7 +19,6 @@ jQuery(document).ready(function() {
 
   });
 
-  jQuery(".faq h4").addClass("faq-question");
 
   // Dynamically load about content
   jQuery("#about").click(function() {
