@@ -4,7 +4,6 @@ const combineReducers = reducer => {
   return (state = {}, action) => {
     const keys = Object.keys(reducer);
     const nextReducers = {};
-    console.log(keys);
     for (let i = 0; i < keys.length; i++) {
       const invoke = reducer[keys[i]](state[keys[i]], action);
       nextReducers[keys[i]] = invoke;

@@ -55,7 +55,7 @@ function Tabs() {
       id={tabId} 
       label={labels[tabId-1]} 
       key={tabId}
-      />
+    />
     )
   );
 }
