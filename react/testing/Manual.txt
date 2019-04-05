@@ -1,0 +1,39 @@
+Create app
+App.test.js 
+Write components/CommentBox, componenets/CommentList simple version
+create src/__tests__
+install enzyme, create setupTests.js inside src
+create .env
+Rewrite CommentBox with class.
+Create components/__tests__/CommentBox.test.js
+Write tests
+Implement describe to group our tests inside CommentBox.test.js
+Cleanup in CommentBox.test.js
+
+create reducers and redux
+Connect CommentBox to store;
+Now we get 'Could find store' error inside test, thats because of mount fn in test doesn't have Provider.
+Create Root.js
+Edit CommentBox.test.js
+Create reducers/__tests__
+Create actions/__tests__
+
+Rewrite CommentList with class based component.
+Create CommentList.text.js then modify Root.js to accept initState from props;
+----- PART 2
+npm i axios redux-promise
+modify Root.js - add middleware.
+add new type and action to type.js and action.js
+add button to fetch comments
+write new action and reducer for fetch comments
+----
+Unit tests vs integration tests
+src/__tests__/integrations.test.js
+write first implementation with click event. get an error
+install moxios
+
+
+
+
+
+
